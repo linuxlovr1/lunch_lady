@@ -42,16 +42,18 @@
         end
 
         def calculation
-        	add = @selection1 + @selection2 + selection3
-        	puts "Your order consits of " "#{add}" 
-        	puts "your total is " 
+        	add = arr dish + price
+        	puts "Your order consits of " 
+        	puts "your total is " "#{add}" 
         end
         main
         side1
         side2
         calculation
 
-
-
-
+        arr = [
+           { dish: "Meatloaf", price: "5.00", dish: "Mystery meat", price: "3.00", dish: "Slop", price: "1.00" },
+           { dish: "Beans", price: 1.75, dish: "Yogurt", price: 1.00, dish: "Potatoes", price: 0.50 },
+           { dish: "Beans", price: 1.75, dish: "Yogurt", price: 1.00, dish: "Potatoes", price: 0.50 }
+     	]
 #end	
