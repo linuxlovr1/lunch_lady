@@ -27,24 +27,23 @@
 
         def side1
         	puts "What side dish would you like?"
-        	puts "1: Beans (1.75)" {Food: "Beans", Price: "1.75"}
+        	puts "1: Beans (1.75)" 
         	puts "2: Yogurt (1.00)"
         	puts "3: Potatoes (.50)"
         	@selection2 = gets.strip.to_f
         end
 
         def side2
-        	puts "What side dish would you like?"
+        	puts "What 2nd side dish would you like?"
         	puts "1: Beans (1.75)"
         	puts "2: Yogurt (1.00)"
         	puts "3: Potatoes (.50)"
         	@selection3 = gets.strip.to_f
         end
+
         def calculation
-        	case total
-        	when ""
-        	end	
-        	puts "Your order consits of " "#{@selection1}" 
+        	add = @selection1 + @selection2 + selection3
+        	puts "Your order consits of " "#{add}" 
         	puts "your total is " 
         end
         main
