@@ -16,12 +16,22 @@
 
 #class Lunch_lady
 	#attr_accessor main:, side1:, side2:
+	    @arr = []
 	    def main
 		puts "What main dish would you like?"
 		puts "1: Meatloaf (5.00)"
 		puts "2: Mystery meat (3.00)"
 		puts "3: Slop (1.00)"
-		@selection1 = gets.strip.to_f
+		selection1 = gets.strip.to_f
+		case selection1
+			when "1"
+				answer = 5.00
+		    when "2"
+		    	answer = 3.00
+		    when "3"	
+		    	answer = 1.00
+		    	answer >> @arr.index(0)
+			end
         end    
         
 
@@ -30,7 +40,16 @@
         	puts "1: Beans (1.75)" 
         	puts "2: Yogurt (1.00)"
         	puts "3: Potatoes (.50)"
-        	@selection2 = gets.strip.to_f
+        	selection2 = gets.strip.to_f
+		case selection2
+			when "1"
+			  	answer = 1.75
+		    when "2"
+		    	answer = 1.00
+		    when "3"
+		    	answer = 0.50
+		    	answer >> @arr.index(1)
+			end
         end
 
         def side2
@@ -38,22 +57,36 @@
         	puts "1: Beans (1.75)"
         	puts "2: Yogurt (1.00)"
         	puts "3: Potatoes (.50)"
-        	@selection3 = gets.strip.to_f
+        	selection3 = gets.strip.to_f
+		case selection3
+			when "1"
+			    answer = 1.75
+		    when "2"
+		    	answer = 1.00
+		    when "3"
+		        answer = 0.50
+		        answer >> @arr.index(2)
+			end
         end
 
-        def calculation
-        	add = arr dish + price
-        	puts "Your order consits of " 
-        	puts "your total is " "#{add}" 
+        def price_calculation
+        	add = @arr.index 
+         	puts "your total is " "#{add}" 
         end
+
+        #def order_contents
+        #	puts "Your order consits of " "#{list}"
+        #end
         main
+        @arr
         side1
         side2
-        calculation
+        price_calculation
+        #order_contents
 
-        arr = [
-           { dish: "Meatloaf", price: "5.00", dish: "Mystery meat", price: "3.00", dish: "Slop", price: "1.00" },
-           { dish: "Beans", price: 1.75, dish: "Yogurt", price: 1.00, dish: "Potatoes", price: 0.50 },
-           { dish: "Beans", price: 1.75, dish: "Yogurt", price: 1.00, dish: "Potatoes", price: 0.50 }
-     	]
+      #   arr = [
+      #      { dish: "Meatloaf", price: "5.00", dish: "Mystery meat", price: "3.00", dish: "Slop", price: "1.00" },
+      #      { dish: "Beans", price: 1.75, dish: "Yogurt", price: 1.00, dish: "Potatoes", price: 0.50 },
+      #      { dish: "Beans", price: 1.75, dish: "Yogurt", price: 1.00, dish: "Potatoes", price: 0.50 }
+     	# ]
 #end	
